@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# Load the cleaned configurator data
+# Load your cleaned configurator data (adjust the data as needed)
 data = {
     'Application': ['Commercial/Residential', 'Commercial/Residential', 'Commercial/Residential', 'Commercial/Residential', 'Commercial/Residential'],
     'Body Manufacturer': ['McNeilus', 'McNeilus', 'McNeilus', 'McNeilus', 'McNeilus'],
@@ -20,10 +20,10 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Streamlit title
+# Title of the App
 st.title("CNG Configurator")
 
-# Filters for the app
+# Create filters using Streamlit widgets
 application_filter = st.selectbox("Select Application", df['Application'].unique())
 body_manufacturer_filter = st.selectbox("Select Body Manufacturer", df['Body Manufacturer'].unique())
 system_type_filter = st.selectbox("Select System Type", df['System Type'].unique())
